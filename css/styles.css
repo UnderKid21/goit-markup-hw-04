@@ -52,7 +52,7 @@ img{
 /* Navigation */
 .header{
     border-bottom: 1px solid #E7E9FC;
-    
+    box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 
 .header-iner{
@@ -103,6 +103,8 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
+    position: relative;
+    color: #404bbf; 
 }
 
 .nav-link:hover,
@@ -133,6 +135,11 @@ img{
 .hero-section{
     background-color:var(--c-brand);
     padding: 188px 0;
+    max-width: 1440px; 
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
 }
 .hero-title{
 color: var(--c-background-light);
@@ -161,6 +168,7 @@ height: 56px;
 border: none;
 border-radius: 4px;
 margin: 0 auto;
+transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover, .button:focus{
     background-color: #404BBF 
@@ -190,6 +198,15 @@ margin: 0 auto;
 }
 .features-box{
     flex-basis: calc((100% - 72px) / 4)
+}
+.features-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px; 
 }
 .features-title{
     color: var(--c-brand);
