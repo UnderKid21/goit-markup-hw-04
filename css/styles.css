@@ -51,7 +51,7 @@ img{
 
 /* Navigation */
 .header{
-    border-bottom: 1px solid #E7E9FC;
+    background-color: var(--c-primary-light);
     box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 
@@ -59,14 +59,17 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
+    border-bottom: 1px solid #E7E9FC;
 
 }
 
 .header-nav{
     display: flex;
     align-items: center;
+    position: relative;
+    color: #404bbf;
 }
+
 
 .logo {
     color: #4D5AE5;
@@ -109,9 +112,6 @@ img{
 .nav-link-first{
     position: relative;
     color: #404bbf; 
-    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
 }
 .nav-link-first::after{
      content: '';
@@ -123,27 +123,27 @@ img{
   height: 4px;
   background-color: #404BBF;
   border-radius: 2px;
+  position: absolute;
 }
 
 .nav-link:hover,
 .nav-link:focus{
-    color: var(--c-cont-but)
+    color: #404bbf
 }
 
 .contact-information{
     font-style: normal;
 }
 .contact{
-    color: var(--c-text-primary);
+    color:#434455;;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact:hover,
-.contact:focus{
-    color: var(--c-cont-but);
+.contact:hover, .contact:focus{
+    color: #404bbf;
 }
 
 
@@ -159,6 +159,8 @@ img{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
+    margin: 0 auto;
+
 }
 .hero-title{
 color: var(--c-background-light);
@@ -167,15 +169,12 @@ font-weight: 700;
 line-height: 1.07; 
 letter-spacing: 1.12px;
 text-align: center;
-margin-bottom: 48px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto ;
 max-width: 496px;
 }
 .button{
     color: var(--c-primary-light);
 background: #4D5AE5;
-font-family: "Roboto", sans-serif;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
@@ -186,7 +185,9 @@ min-width: 169px;
 height: 56px;
 border: none;
 border-radius: 4px;
+padding: 16px 32px;
 margin: 0 auto;
+margin-top: 48px;
 transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover, .button:focus{
@@ -196,7 +197,7 @@ transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* Features */
 .features-section{
-    padding: 120px 0 120px;
+    padding: 120px 0 120px 0;
 }
 .visually-hidden {
     position: absolute;
@@ -218,7 +219,7 @@ transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .features-box{
     flex-basis: calc((100% - 72px) / 4)
 }
-.features-icon{
+.icon-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,6 +227,10 @@ transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #f4f4fd;
     border-radius: 4px;
     margin-bottom: 8px; 
+    border: 1px solid  #8E8F99;
+}
+.features-icon{
+    flex-shrink: 0;
 }
 .features-title{
     color: var(--c-brand);
@@ -241,7 +246,6 @@ font-size: 16px;
 font-weight: 400;
 line-height: 1.5;
 letter-spacing: 0.02em;
-max-width: 264px;
 }
 
 /* Our team */
@@ -358,9 +362,11 @@ row-gap: 48px;
     line-height: 1.5;
     letter-spacing: 0.02em; 
     padding: 40px 32px;
+    color:#f4f4fd;
     background-color: #4d5ae5;
     height: 100%;
-    width: 100%; 
+    width: 100%;  
+    position: absolute; 
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
@@ -392,6 +398,11 @@ margin-bottom: 8px;
   background-color: var(--c-brand);
   padding: 100px 0;
 }
+.footer-container{
+    display: flex;
+    align-items: baseline;  
+    margin-right: 120px 
+}
 .logo-footer{
     color: #4D5AE5;
 font-family: "Raleway", sans-serif;
@@ -415,3 +426,40 @@ display: inline-block
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+.social-media-footer {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--c-primary-light);
+    margin-bottom: 16px;
+}
+
+.social-media-list-footer{
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social-link{
+    width: 40px;
+    height: 40px;
+}
+
+.footer-link{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-logo);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-link:hover,
+.footer-link:focus{
+    background-color: var(--c-footer-link-hover);
+}
+
+.footer-icon{
+    fill: var(--c-second);}
